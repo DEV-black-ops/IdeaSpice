@@ -13,7 +13,7 @@ from exception import customException
 from logger import logging
 import os
 
-from src.utils import save_object
+from utils import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -72,7 +72,7 @@ class DataTransformation:
             return preprocessor
         
         except Exception as e:
-            raise CustomException(e,sys)
+            raise customException(e,sys)
         
     def initiate_data_transformation(self,train_path,test_path):
 
@@ -122,4 +122,4 @@ class DataTransformation:
                 self.data_transformation_config.preprocessor_obj_file_path,
             )
         except Exception as e:
-            raise CustomException(e,sys)
+            raise customException(e,sys)

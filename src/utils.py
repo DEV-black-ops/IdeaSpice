@@ -7,8 +7,9 @@ import dill
 import pickle
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
-
-from src.exception import CustomException
+from pathlib import Path 
+sys.path.append(str(Path(__file__).parent.parent))
+from exception import customException
 
 def save_object(file_path, obj):
     try:
@@ -20,4 +21,4 @@ def save_object(file_path, obj):
             pickle.dump(obj, file_obj)
 
     except Exception as e:
-        raise CustomException(e, sys)
+        raise customException(e, sys)
