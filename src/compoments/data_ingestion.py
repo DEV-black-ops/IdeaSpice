@@ -1,7 +1,9 @@
 import os
-import sys 
-from src.exception import customException
-from src.logger import logging
+import sys
+from pathlib import Path 
+sys.path.append(str(Path(__file__).parent.parent))
+from exception import customException
+from logger import logging
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -24,7 +26,7 @@ class DataIngestion:
             logging.info('Reading data as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
-            df.to_csv(self.ingestion_config.raw_data_path_data_path,index=False,header=True)
+            df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
             logging.info("train test split initiated")
             
             train_set,test_set = train_test_split(df,train_size=0.2,random_state=42)

@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "main",
             "env":{
-                "PYTHONPATH":"$(workspaceFolder)/../extern"
+                "PYTHONPATH":"$(workspaceFolder)/../src"
             },
             "justMyCode": true
         }
