@@ -7,7 +7,7 @@ from logger import logging
 from data_transformation import DataTransformation
 from data_transformation import DataTransformationConfig
 
-from model_trainer import ModelTrainerConfig
+from model_trainer import ModelTrainingConfig
 from model_trainer import ModelTrainer
 
 

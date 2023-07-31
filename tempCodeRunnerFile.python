@@ -1,0 +1,15 @@
+import random
+
+def generate_question():
+
+    operand1 = random.randint(1, 20)
+
+    operand2 = random.randint(1, 20)
+
+    operator = random.choice(['+', '-', '*', '/'])
+
+    question = f"{operand1} {operator} {operand2}"
+
+    return question
+
+print(generate_question)
